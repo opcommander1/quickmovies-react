@@ -1,13 +1,35 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+nav {
+  background: url('/img/popcornnav.jpg') no-repeat;
+  background-size: 10%;
+  background-position: left;
+  font-weight: 600;
+ }
+
+ nav img {
+   width: 10%;
+   height: 100%;
+   float: right;
+ }
+
+ .nav-style a {
+   color: #ffffff;
+   transition: color .3s ease-in-out; 
+ }
+
+ .nav-style a:hover {
+   color: #fdd835;
+ }
+
+
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
