@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter, Switch } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Search from './components/Search'
+import MovieInfo from './components/MovieInfo'
 
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
         <div>
           <Navbar />
           <Search />
+          <MovieInfo />
           <Switch>
 
           </Switch>
