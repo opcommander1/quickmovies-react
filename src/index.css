@@ -23,9 +23,21 @@ nav {
    transition: color .3s ease-in-out; 
  }
 
+ /* #title-search {
+   background: url('/img/startrek.jpg') repeat;
+   
+   background-position: center;
+ } */
+
  .nav-style a:hover {
-   color: #fdd835;
+   color: #fdd835; 
  }
+
+ .carousel .carousel-item img {
+   width: 400px;
+   height: 300px;
+ }
+
 
 
 
