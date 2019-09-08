@@ -8,10 +8,20 @@ class MovieInfo extends Component {
       var elems = document.querySelectorAll('.materialboxed');
       M.Materialbox.init(elems, {});
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.parallax');
+      M.Parallax.init(elems, {});
+    });
   }
   render () {
     return (
     <section id="movie-info" className="container">
+    <div className="title-section">
+          <div className="row col s12 l12 center">
+           <h3>MOVIE INFORMATION</h3>
+          </div>
+        </div>
       <div className="row">
         <div className="col s12 l4">
           <div className="backdrop-image">

@@ -8,24 +8,48 @@ class Search extends Component {
       M.Carousel.init(elems, {});
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.slider');
+      M.Slider.init(elems, {});
+    });
+  
+
   }
   render () {
     const heightStyle = {
       height: '60px'
     }
-    const titleBg = {
-      background: 'url("/img/startrek.jpg")',
-      'background-position': 'center',      
-    } 
     return (
-    <section style={titleBg} id="title-search">
+    <section id="title-search" className="black">
       <div className="row">
         <div className="col s12 m6 offset-m3">
-          <div className="card z-depth-2">
+          <div className="slider">
+            <ul className="slides">
+              <li>
+                <img src="./img/title.jpg" alt="MIAAG"/>
+              </li>
+              <li>
+                <img src="./img/blackbg.jpg" alt="Black Background Color"/>
+                <div className="caption center-align">
+                  <h3>Top Rated Movies</h3>
+                </div>
+              </li>
+              <li>
+                <img src="./img/godfather2.jpeg" alt="The Godfather"/>
+              </li>
+              <li>
+                <img src="./img/spiderman2.jpg" alt="Spider-Man"/>
+              </li>
+              <li>
+                <img src="./img/schindlerslist2.jpg" alt="Schindler's List"/>
+              </li>
+            </ul>
+          </div>
+          {/* <div className="card z-depth-2">
             <div className="card-image">
               <img src="./img/title.jpg" alt="MIAAG"/>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="row">
           <div className="col s12 m6 offset-m3">

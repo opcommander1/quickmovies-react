@@ -3,6 +3,10 @@ import { BrowserRouter, Switch } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Search from './components/Search'
 import MovieInfo from './components/MovieInfo'
+import MovieParallax from './components/MovieParallax'
+import SimilarMovies from './components/SimilarMovies'
+import SimilarParallax from './components/SimilarParallax'
+import Footer from './components/layout/Footer'
 
 
 class App extends Component {
@@ -13,6 +17,10 @@ class App extends Component {
           <Navbar />
           <Search />
           <MovieInfo />
+          <MovieParallax />
+          <SimilarMovies />
+          <SimilarParallax />
+          <Footer />
           <Switch>
 
           </Switch>

@@ -33,15 +33,34 @@ nav {
    color: #fdd835; 
  }
 
- .carousel .carousel-item img {
-   width: 400rem;
-   height: 300rem;
+ #title-search{
+   padding-top: 25px;
  }
+
+.slider .slides li img {
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: red;
+}
 
  .img-style {
    width: 200px;
    height: 280px;
-   overflow: hidden;
+ }
+ 
+ footer {
+   padding-top: 1px;
+ }
+
+ footer a {
+   color: #69f0ae;
+ }
+
+ footer img {
+   width: 70px;
  }
 
 
