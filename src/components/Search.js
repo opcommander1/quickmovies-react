@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import M from 'materialize-css'
+import SearchResults from './layout/SearchResults'
+// import axios from 'axios'
 
 class Search extends Component {
+  state = {
+    query: ''
+  }
   componentDidMount() {
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.carousel');
@@ -12,13 +17,51 @@ class Search extends Component {
       var elems = document.querySelectorAll('.slider');
       M.Slider.init(elems, {});
     });
-  
-
   }
+
+handleChange = (e) => {
+  this.setState({
+    query: e.target.value
+  })
+}
+
+handleSubmit = (e) => {
+  e.preventDefault();
+  this.props.getMovieResults(this.state.query);
+}
+
+// getMovieresults = async () => {
+//   try {
+//     const res = await axios(`${config.proxy}https://api.themoviedb.org/3/search/movie?api_key=${config.key}&query=${this.state.query}`);
+//         this.setState({
+//           results: res.data.results     
+//         })
+//         console.log(this.state.results)
+//   } catch (error) {
+//     alert(error);
+//   }
+// }
+
+
   render () {
-    const heightStyle = {
-      height: '60px'
-    }
+    // let searchList = null
+    // const { searchResults } = this.props.searchresults
+    // if(searchList) {
+    //   searchList = searchResults.map(result => {
+    //     return (
+    //       <div className="row">
+    //         <div className="col s12 m6 offset-m3">
+    //           <ul style={heightStyle} className="collection z-depth-1" key={result.id}>
+    //             <li className="collection-item avatar">
+    //               <img src="./img/startrek.jpg" alt="" className="circle"/>
+    //               <span className="title center"><a href={result.id}>Star Trek Nemesis</a></span>
+    //             </li>
+    //           </ul>
+    //         </div>
+    //       </div>
+    //     )
+    //   })
+    // } 
     return (
     <section id="title-search" className="black">
       <div className="row">
@@ -45,18 +88,13 @@ class Search extends Component {
               </li>
             </ul>
           </div>
-          {/* <div className="card z-depth-2">
-            <div className="card-image">
-              <img src="./img/title.jpg" alt="MIAAG"/>
-            </div>
-          </div> */}
         </div>
         <div className="row">
           <div className="col s12 m6 offset-m3">
             <div className="nav-wrapper">
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 <div className="input-field black z-depth-2">
-                  <input type="search" id="search" require/>
+                  <input type="search" id="search" onChange={this.handleChange} />
                   <label htmlFor="search" className="label-icon"><i className="material-icons red-text">search</i></label>
                 </div>
               </form>
@@ -65,18 +103,20 @@ class Search extends Component {
         </div>
         <div className="row">
           <div className="col s12 m6 offset-m3">
-            <ul style={heightStyle} className="collection z-depth-1">
+            <SearchResults sresults={this.props.searchresults} getMovieInfo={this.props.getMovieInfo}/>
+            {/* { searchList } */}
+            {/* <ul style={heightStyle} className="collection z-depth-1">
               <li className="collection-item avatar">
                 <img src="./img/startrek.jpg" alt="" className="circle"/>
                 <span className="title center"><a href="#star">Star Trek Nemesis</a></span>
               </li>
-            </ul>
-            <ul style={heightStyle} className="collection z-depth-1">
+            </ul> */}
+            {/* <ul style={heightStyle} className="collection z-depth-1">
               <li className="collection-item avatar">
                 <img src="./img/startrek.jpg" alt="" className="circle"/>
                 <span className="title center"><a href="#star">Star Trek Nemesis</a></span>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
