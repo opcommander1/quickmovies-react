@@ -7,19 +7,13 @@ class Search extends Component {
   state = {
     query: ''
   }
-  componentDidMount() {
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.carousel');
-      M.Carousel.init(elems, {});
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.slider');
-      M.Slider.init(elems, {});
-    });
-  }
+ 
+handleClearInput = () => {
+  document.querySelector('#search').value = '';
+}
 
 handleChange = (e) => {
+  this.props.handleClearSearch()
   this.setState({
     query: e.target.value
   })
@@ -28,6 +22,7 @@ handleChange = (e) => {
 handleSubmit = (e) => {
   e.preventDefault();
   this.props.getMovieResults(this.state.query);
+  this.handleClearInput()
 }
 
 // getMovieresults = async () => {
@@ -63,18 +58,24 @@ handleSubmit = (e) => {
     //   })
     // } 
     return (
-    <section id="title-search" className="black">
+    <section id="title-search" className="black scrollspy">
       <div className="row">
-        <div className="col s12 m6 offset-m3">
+        <div className="col s12 l8 offset-l2">
           <div className="slider">
             <ul className="slides">
               <li>
-                <img src="./img/title.jpg" alt="MIAAG"/>
+                <img src="./img/titlenew.jpg" alt="MIAAG"/>
+                <div className="caption center-align">
+                  <h3 className="black-text">Movie Information At A Glance</h3>
+                </div>
               </li>
               <li>
                 <img src="./img/blackbg.jpg" alt="Black Background Color"/>
                 <div className="caption center-align">
                   <h3>Top Rated Movies</h3>
+                  <h5>The Godfather</h5>
+                  <h5>Spider-Man Into The Spider-Verse</h5>
+                  <h5>Schindler's List</h5>
                 </div>
               </li>
               <li>
@@ -103,7 +104,7 @@ handleSubmit = (e) => {
         </div>
         <div className="row">
           <div className="col s12 m6 offset-m3">
-            <SearchResults sresults={this.props.searchresults} getMovieInfo={this.props.getMovieInfo}/>
+            <SearchResults sresults={this.props.searchresults} getMovieInfo={this.props.getMovieInfo} />
             {/* { searchList } */}
             {/* <ul style={heightStyle} className="collection z-depth-1">
               <li className="collection-item avatar">
