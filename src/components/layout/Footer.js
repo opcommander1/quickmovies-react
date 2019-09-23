@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Footer = () => {
+  
   return (
     <footer className="black">
       <ul className="white-text center">
