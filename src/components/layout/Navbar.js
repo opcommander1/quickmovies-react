@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
   return (
     <div className="navbar-fixed">
       <nav className="black">
+        <img src="../../img/popcornnav.jpg" alt="" className="bowl-img left hide-on-med-and-down"/>
+         <a href="#empty" data-target="mobile-nav" className="sidenav-trigger"><i className="material-icons">menu</i></a>
         <img src="../../img/popcornnavtwo.jpg" alt=""/>
         <div className="container">
           <ul className="nav-mobile left hide-on-med-and-down">
@@ -16,6 +17,14 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+
+      {/* Mobile Responsive */}
+      <ul className="sidenav" id="mobile-nav">
+        <li><a className="modal-trigger sidenav-close" href="#about" data-target="about" >About</a></li>
+        <li><a href="#title-search" id="nav-style" className="sidenav-close">Search</a></li>
+        <li><a href="#movie-info" className="sidenav-close">Movie Info</a></li>
+        <li><a href="#similar-movies" className="sidenav-close">Similar Movies</a></li>
+      </ul>
     </div>
   )
 }

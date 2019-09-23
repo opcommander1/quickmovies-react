@@ -6,34 +6,29 @@ body {
 }
 
 nav {
-  background: url('/img/popcornnav.jpg') no-repeat;
-  background-size: 10%;
-  background-position: left;
-  font-weight: 600;
+  font-weight: 500;
  }
 
- nav img {
+nav img {
    width: 10%;
    height: 100%;
    float: right;
  }
 
- .nav-style a {
+.nav-style a {
    color: #ffffff;
    transition: color .3s ease-in-out; 
  }
 
- /* #title-search {
-   background: url('/img/startrek.jpg') repeat;
-   
-   background-position: center;
- } */
-
- .nav-style a:hover {
+.nav-style a:hover {
    color: #fdd835; 
  }
 
- #title-search{
+.sidenav-overlay {
+   z-index: 996;
+ }
+
+ #title-search {
    padding-top: 25px;
  }
 
@@ -46,7 +41,7 @@ nav {
   background-color: red;
 }
 
- .img-style {
+.img-style {
    width: 200px;
    height: 280px;
  }
@@ -67,9 +62,9 @@ nav {
    width: 70px;
  }
 
-
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
+/* Change the height of the parallax container */
+@media only screen and (max-width: 600px) {
+  .parallax-container {
+    height: 200px;
+  }
+}

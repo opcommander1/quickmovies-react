@@ -6,6 +6,7 @@ const SearchResults = ({sresults, getMovieInfo}) => {
   }
   return (
     <div>
+      {/* Gets the result from array and list them within the interface */}
       {sresults.map((result) => (
         <ul style={heightStyle} className="collection z-depth-1" key={result.id}>
         <li className="collection-item avatar">

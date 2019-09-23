@@ -1,6 +1,7 @@
 import React from 'react'
 
 const SimilarMovies = ({similarmovies}) => {
+
     return (
       <section id="similar-movies" className="container scrollspy">
           <div className="title-section">
@@ -9,6 +10,7 @@ const SimilarMovies = ({similarmovies}) => {
             </div>
           </div>
           <div className="row center">
+          {/* Gets the Similar Movie Info result from array and list them within the interface */}
           {similarmovies.map((similarMovie) => (
             <div className="col s12 l6" key={similarMovie.id}>
               <div className="image">
