@@ -22,7 +22,7 @@ handleChange = (e) => {
 
 //Submit user movie input, prevent the submit from refreshing, 
 //Pass user movie input to get movie result from api
-//Then clear the input box
+//Then clear the input box after
 handleSubmit = (e) => {
   e.preventDefault();
   this.props.getMovieResults(this.state.query);
