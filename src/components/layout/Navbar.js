@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <div className="navbar-fixed">
       <nav className="black">
-        <img src="../../img/popcornnav.jpg" alt="" className="bowl-img left hide-on-med-and-down"/>
+        <img src="../../img/popcornnav.jpg" alt="" className="bowl-img left hide-on-med-and-down responsive-img"/>
          <a href="#empty" data-target="mobile-nav" className="sidenav-trigger"><i className="material-icons">menu</i></a>
-        <img src="../../img/popcornnavtwo.jpg" alt=""/>
+        <img src="../../img/popcornnavtwo.jpg" alt="" className="responsive-img"/>
         <div className="container">
           <ul className="nav-mobile left hide-on-med-and-down">
             <li className="nav-style"><a className="modal-trigger" href="#about" data-target="about">About</a></li>
