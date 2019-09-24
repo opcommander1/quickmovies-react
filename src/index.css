@@ -10,7 +10,8 @@ nav {
  }
 
 nav img {
-   width: 10%;
+   width: 5%;
+   height: 90% !important;
    float: right;
  }
 
@@ -61,9 +62,19 @@ nav img {
    width: 70px;
  }
 
-/* Change the height of the parallax container */
+
 @media only screen and (max-width: 600px) {
   .parallax-container {
     height: 200px;
+  }
+
+  nav img {
+    width: 10%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  nav img {
+    width: 10%;
   }
 }
